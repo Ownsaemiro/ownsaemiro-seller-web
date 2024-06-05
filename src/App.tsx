@@ -3,7 +3,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import Signup from "./pages/Seller_signup";
 import FindPW from "./pages/Seller_findpw";
 import MainPage1 from "./pages/Seller_mainpage";
-import StartPage from "./pages/Seller_startpage";
+import StartPage from "./pages/StartPage";
 import SellerLoginPage from "./pages/Seller_loginpage";
 import MainPage from "./components/MainPage";
 import "./css/StartPage.css";
@@ -17,7 +17,6 @@ function App() {
       <Route path="/manager_findPW" element={<FindPW />} />
       <Route path="/mainpage" element={<MainPage />} />
       <Route path="/mainpage1" element={<MainPage1 />} />
-
     </Routes>
   );
 }
