@@ -84,19 +84,9 @@ export default function LoginContainer() {
       </Styled.FormContainer>
 
       <Styled.ButtonContainer>
-        <button
-          className="signup-button right-align"
-          onClick={() => navigate("/register")}
-        >
+        <Styled.RegisterButton onClick={() => navigate("/register")}>
           회원가입
-        </button>
-        |
-        <button
-          className="signup-button left-align"
-          onClick={() => navigate("/find")}
-        >
-          비밀번호 찾기
-        </button>
+        </Styled.RegisterButton>
       </Styled.ButtonContainer>
     </Styled.LoginContainer>
   );

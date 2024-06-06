@@ -14,7 +14,7 @@ export const instance = axios.create({
 
 instance.interceptors.request.use(
   (config) => {
-    const accessToken = Cookies.get("accessToken");
+    const accessToken = Cookies.get("access_token");
     if (accessToken) {
       config.headers["Authorization"] = `Bearer ${accessToken}`;
       config.withCredentials = true;
@@ -46,7 +46,7 @@ instance.interceptors.response.use(
 
           if (response.status === 200) {
             const newAccessToken = response.data.accessToken;
-            Cookies.set("accessToken", newAccessToken, {
+            Cookies.set("access_token", newAccessToken, {
               path: "/",
               domain: "localhost",
             });
