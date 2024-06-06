@@ -48,9 +48,10 @@ instance.interceptors.response.use(
             const newAccessToken = response.data.accessToken;
             Cookies.set("accessToken", newAccessToken, {
               path: "/",
-              domain: "cafevery.site",
+              domain: "localhost",
             });
-            originalRequest.headers["Authorization"] = `Bearer ${newAccessToken}`;
+            originalRequest.headers["Authorization"] =
+              `Bearer ${newAccessToken}`;
             originalRequest.withCredentials = true;
             return instance(originalRequest);
           }
